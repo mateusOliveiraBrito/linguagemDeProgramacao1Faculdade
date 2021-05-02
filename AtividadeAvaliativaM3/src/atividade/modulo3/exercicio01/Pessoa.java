@@ -38,16 +38,23 @@ public class Pessoa {
         this._altura = _altura;
     }
 
-    public Integer calculeIdadePessoa() {
+    private Integer calculeIdadePessoa() {
         Calendar calendario = Calendar.getInstance();
         int idade = calendario.get(Calendar.YEAR) - _dataDeNascimento.get(Calendar.YEAR);
         return idade;
     }
 
     public void imprimaDadosPessoa() {
-        System.out.println("Nome: " + _nome
-                + "Data de Nascimento: " + _dataDeNascimento
-                + "Idade: "
-                + "Altura: " + _altura);
+        System.out.println("\n====DADOS===="
+                + "\nNome: " + _nome
+                + "\nData de Nascimento: " + formateDataDeNascimento()
+                + "\nIdade: " + calculeIdadePessoa()
+                + "\nAltura: " + _altura);
+    }
+
+    private String formateDataDeNascimento() {
+        return _dataDeNascimento.get(Calendar.DAY_OF_MONTH)
+                + "/" + _dataDeNascimento.get(Calendar.MONTH)
+                + "/" + _dataDeNascimento.get(Calendar.YEAR);
     }
 }

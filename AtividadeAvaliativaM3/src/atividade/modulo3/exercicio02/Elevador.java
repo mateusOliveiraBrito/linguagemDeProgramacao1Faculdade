@@ -1,13 +1,20 @@
 package atividade.modulo3.exercicio02;
 
 public class Elevador {
-    
+
     private Integer _totalDeAndares;
     private Integer _andarAtual;
     private Integer _capacidadeElevador;
     private Integer _quantidadeAtualDePessoas;
-    
-    public void Inicialize(Integer capacidadeElevador, Integer totalDeAndares){
+
+    public Elevador() {
+        _totalDeAndares = new Integer(0);
+        _andarAtual = new Integer(0);
+        _capacidadeElevador = new Integer(0);
+        _quantidadeAtualDePessoas = new Integer(0);
+    }
+
+    public void Inicialize(Integer capacidadeElevador, Integer totalDeAndares) {
         setCapacidadeElevador(capacidadeElevador);
         setTotalDeAndares(totalDeAndares);
     }
@@ -43,50 +50,59 @@ public class Elevador {
     public void setQuantidadeAtualDePessoas(Integer _quantidadeAtualDePessoas) {
         this._quantidadeAtualDePessoas = _quantidadeAtualDePessoas;
     }
-    
-    public void Entra(){
-        if (_quantidadeAtualDePessoas < _capacidadeElevador){
+
+    public void Entra() {
+        if (_quantidadeAtualDePessoas < _capacidadeElevador) {
             _quantidadeAtualDePessoas++;
             return;
         }
-        
-        System.out.println("A capacidade máxima já foi atingida!");
+
+        System.out.println("\nATENÇÃO: A capacidade máxima já foi atingida!");
     }
-    
-    public void Sai(){
-        if (_quantidadeAtualDePessoas > 0){
+
+    public void Sai() {
+        if (_quantidadeAtualDePessoas > 0) {
             _quantidadeAtualDePessoas--;
             return;
         }
-        
-        System.out.println("Não há ninguém no elevador!");
+
+        System.out.println("\nATENÇÃO: Não há ninguém no elevador!");
     }
-    
-    public void Sobe(){
-        if (_andarAtual < _totalDeAndares){
+
+    public void Sobe() {
+        if (_andarAtual < _totalDeAndares) {
             _andarAtual++;
             return;
         }
-        
-        System.out.println("O elevador já se encontra no último andar!");
+
+        System.out.println("\nATENÇÃO: O elevador já se encontra no último andar!");
     }
-    
-    public void Desce(){
+
+    public void Desce() {
         int terreo = 0;
-        if (_andarAtual > terreo){
+        if (_andarAtual > terreo) {
             _andarAtual--;
             return;
         }
-        
-        System.out.println("O elevador já se encontra no térreo!");
+
+        System.out.println("");
+        System.out.println("ATENÇÃO: O elevador já se encontra no térreo!");
     }
-    
-    public void imprimaEstadoAtual(){
+
+    public void imprimaEstadoAtual() {
         StringBuilder sb = new StringBuilder();
+
+        sb.append("\nTotal de andares: " + _totalDeAndares + " andares");
+
+        if (_andarAtual == 0) {
+            sb.append("\nAndar atual: térreo");
+        } else {
+            sb.append("\nAndar atual: " + _andarAtual + "° andar");
+        }
         
-        sb.append("Total de andares: " + _totalDeAndares + " andares");
-        sb.append("Andar atual: " + _andarAtual + "° andar");
-        sb.append("Capacidade máxima: " + _capacidadeElevador + " pessoas");
-        sb.append("Quantidade atual de pessoas: " + _quantidadeAtualDePessoas);
+        sb.append("\nCapacidade máxima: " + _capacidadeElevador + " pessoas");
+        sb.append("\nQuantidade atual de pessoas: " + _quantidadeAtualDePessoas + " pessoas");
+
+        System.out.println(sb.toString());
     }
 }
