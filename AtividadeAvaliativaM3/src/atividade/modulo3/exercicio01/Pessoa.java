@@ -1,13 +1,13 @@
-package atividade.modulo3.dominio;
+package atividade.modulo3.exercicio01;
 
 import java.util.Calendar;
 
 public class Pessoa {
 
     public Pessoa(String nome, Calendar dataDeNascimento, Double altura) {
-        _nome = nome;
-        _dataDeNascimento = dataDeNascimento;
-        _altura = altura;
+        setNome(nome);
+        setDataDeNascimento(dataDeNascimento);
+        setAltura(altura);
     }
 
     private String _nome;
