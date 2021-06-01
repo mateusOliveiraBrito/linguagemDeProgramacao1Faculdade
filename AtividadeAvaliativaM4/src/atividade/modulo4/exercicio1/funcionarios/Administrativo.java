@@ -12,6 +12,14 @@ public class Administrativo extends Assistente {
         this.turno = turno;
         aplicaAdicionalNoturno();
     }
+
+    public String getTurno() {
+        return turno;
+    }
+
+    public void setTurno(String turno) {
+        this.turno = turno;
+    }
     
     private void aplicaAdicionalNoturno(){
         if (turno.equalsIgnoreCase("Noturno")){
