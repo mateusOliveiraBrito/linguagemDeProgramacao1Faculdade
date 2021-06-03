@@ -1,4 +1,4 @@
-package atividade.modulo4.exercicio1.abstracoes;
+package atividade.modulo04.exercicio01;
 
 public abstract class Assistente extends Funcionario {
 

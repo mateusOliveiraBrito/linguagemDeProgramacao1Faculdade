@@ -1,6 +1,6 @@
-package atividade.modulo4.exercicio1.funcionarios;
+package atividade.modulo04.exercicio01;
 
-import atividade.modulo4.exercicio1.abstracoes.Assistente;
+import atividade.modulo04.exercicio01.Assistente;
 
 public class Tecnico extends Assistente {
     

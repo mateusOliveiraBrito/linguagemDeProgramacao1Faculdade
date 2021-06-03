@@ -1,6 +1,6 @@
-package atividade.modulo4.exercicio1.funcionarios;
+package atividade.modulo04.exercicio01;
 
-import atividade.modulo4.exercicio1.abstracoes.Funcionario;
+import atividade.modulo04.exercicio01.Funcionario;
 
 public class Gerente extends Funcionario {
 
