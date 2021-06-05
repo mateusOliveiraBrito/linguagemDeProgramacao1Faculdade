@@ -11,7 +11,7 @@ public class Teste {
         imovelNovo.imprimeValorAdicional();
         System.out.println("Valor total: " + imovelNovo.getPreco());
 
-        System.out.println("\n\n");
+        System.out.println("\n");
 
         System.out.println("===========IMÓVEL VELHO==========");
         Velho imovelVelho = new Velho("Rua dos alfeneiros, n° 4, Surrey", 10000d);
